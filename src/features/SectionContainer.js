@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { colors } from "../constants/colors";
 
 const MainContainer = styled.div`
-    padding: 30px 150px;
+    padding: 30px 200px;
     /* background-color: ${colors.primary}; */
     background-color: ${props => props.color};
     min-height: 100vh;
