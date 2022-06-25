@@ -92,8 +92,11 @@ const HomePage = () => {
                 <CustomeTitle color={colors.accent} b_color="#fff">Investment Packages</CustomeTitle>
                 <div className="investment_packages">
                     { investment_packages.map((item, index) => (
-                        <PackageBox>
-                            MY MY
+                        <PackageBox bg_color={item.bg_color}>
+                            <PackageTitle1 color={item.color}>{item.package_name}</PackageTitle1>
+                            <PackageTitle color={item.color}>{item.story}</PackageTitle>
+                            <PackagePrize>USD${item.fee}</PackagePrize>
+                            <PackageBtn>Get Started</PackageBtn>
                         </PackageBox>
                     )) }
                 </div>
@@ -103,11 +106,64 @@ const HomePage = () => {
 }
 
 const PackageBox = styled.div`
-
+    background-color: ${props=>props.bg_color};
+    position: relative;
+    padding: 50px 20px;
+    margin-top: 80px;
+    border-radius: 8px;
+    box-shadow: 
+                -6px -6px 4px rgba(255,255,255,0.6);
 `;
 
+const PackageTitle1 = styled.h3`
+    color: ${colors.accent};
+    font-family: oswald, sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+`;
 const PackageTitle = styled.p`
+    color: ${props=>props.color};
+    margin: 0;
+    padding: 0;
+    font-family: roboto, sans-serif;
+    line-height: 22px;
+    font-weight: 400;
+`;
 
+const PackagePrize = styled.p`
+    background-color: ${colors.accent};
+    border: 8px solid ${colors.primary};
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: ${colors.bg_color};
+    font-size: 13px;
+    font-weight: bold;
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+`;
+
+const PackageBtn = styled.button`
+    background-color: ${colors.accent};
+    color: ${colors.primary};
+    border: none;
+    border-radius: 6px;
+    padding: 12px 30px;
+    font-family: roboto, sans-serif;
+    text-transform: uppercase;
+    font-size: bold;
+    display: block;
+    margin: 15px auto;
 `;
 
 const StrategyBox = styled.div`

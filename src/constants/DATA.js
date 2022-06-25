@@ -8,12 +8,12 @@ export const investment_strategies = [
 ];
 
 export const investment_packages = [
-        { id: 1, package_name: "Opal", fee: 100, color: "" },
-        { id: 2, package_name: "Pearl", fee: 200, color: "" },
-        { id: 3, package_name: "Emerald", fee: 300, color: "" },
-        { id: 4, package_name: "Ruby", fee: 1000, color: "" },
-        { id: 5, package_name: "Sapphire", fee: 3000, color: "" },
-        { id: 6, package_name: "Diamond", fee: 5000, color: "" },
+        { id: 1, package_name: "Opal", fee: 100, bg_color: "#E9CEC0" , color: "#01050f", story: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor  ut labore et dolore magna aliqua.  Ut enim ad minim.` },
+        { id: 2, package_name: "Pearl", fee: 200, bg_color: "#033287" , color: "#fff", story: `Lorem ipsum dolor sit amet, consectetu adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim.` },
+        { id: 3, package_name: "Emerald", fee: 300, bg_color: "#004637" , color: "#fff", story: `Lorem ipsum dolor sit amet, consectetu adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim.` },
+        { id: 4, package_name: "Ruby", fee: 1000, bg_color: "#93101C" , color: "#fff", story: `Lorem ipsum dolor sit amet, consectetu adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim.` },
+        { id: 5, package_name: "Sapphire", fee: 3000, bg_color: "#141562" , color: "#fff", story: `Lorem ipsum dolor sit amet, consectetu adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim.` },
+        { id: 6, package_name: "Diamond", fee: 5000, bg_color: "#C6C7DA" , color: "#01050f", story: `Lorem ipsum dolor sit amet, consectetu adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim.` },
 ];
 
 export const qualities = [

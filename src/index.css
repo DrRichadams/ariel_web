@@ -79,3 +79,9 @@ code {
 .service_btn:hover{
   color: #ff8800bb;
 }
+
+.investment_packages {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+}

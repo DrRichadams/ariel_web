@@ -6,7 +6,7 @@ export const colors = {
     menu_color: '#D9D9D9',
     success: '#3BB54A',
     darkShadow: "rgba(36,40,80,0.1)",
-    accentShadow: "#FF8A00",
+    accentShadow: "rgba(255, 138, 0, 0.3)",
 }
 
 export const opacities = {
