@@ -1,10 +1,15 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components";
 import HomeMenu from "../components/HomeMenu";
 import { SectionContainer } from "../features/SectionContainer";
 import { colors } from "../constants/colors";
 import { Title1, Title2, Text1 } from "../utils/Titles";
 import { Img1 } from "../utils/Images";
+import { 
+    investment_strategies, 
+    investment_packages, 
+    qualities
+} from "../constants/DATA";
 
 const HomePage = () => {
     return(
@@ -59,11 +64,85 @@ const HomePage = () => {
                 </div>
             </SectionContainer>
             <SectionContainer bg_color={colors.bg_color}>
-
+                <CustomeTitle color={colors.accent} b_color="black">OUR SERVICES</CustomeTitle>
+                <InnerServiceContainer>
+                    <Img1 src={process.env.PUBLIC_URL + "/images/affiliates_pic.png"} alt="" className="left_service service_pic" />
+                    <div className="right_service service_box">
+                        <h1 className="service_title">Affiliate Marketing</h1>
+                        <p className="service_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <button className="service_btn">Get Started</button>
+                    </div>
+                </InnerServiceContainer>
+                <InnerServiceContainer>
+                    <div className="left_service service_box">
+                        <h1 className="service_title">Investment Management</h1>
+                        <p className="service_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <button className="service_btn">Get Started</button>
+                    </div>
+                    <Img1 src={process.env.PUBLIC_URL + "/images/investment_img.png"} alt="" className="right_service service_pic" />
+                </InnerServiceContainer>
+            </SectionContainer>
+            <SectionContainer bg_color={colors.primary}>
+                <CustomeTitle color={colors.accent} b_color="#fff">Investment Strategy</CustomeTitle>
+                <div className="investment_strategies">
+                    { investment_strategies.map((item, index) => ( <StrategyBox pos={index + 5} key={item.id}> <StrategyTitle>{item.name}</StrategyTitle> </StrategyBox> )) }
+                </div>
             </SectionContainer>
         </div>
     )
 }
+
+const StrategyBox = styled.div`
+    position: relative;
+    z-index: 100;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    ::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+        height: calc(${props => props.pos} * 3px);
+        width: 100%;
+        background-color: ${colors.accent};
+    }
+`
+
+const StrategyTitle = styled.p`
+    color: ${colors.secondary};
+    font-family: roboto, sans-serif;
+    text-transform: uppercase;
+    /* text-align: right; */
+`
+
+const CustomeTitle = styled.h2`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-family: oswald;
+    font-size: 60px;
+    color: ${props => props.color};
+    position: relative;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    ::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background-color: ${props => props.b_color};
+    }
+
+`;
+const InnerServiceContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
 
 const HomeBanner = styled.div`
     display: flex;
@@ -94,8 +173,12 @@ const BoxContainer = styled.div`
     padding: 20px;
     max-width: 300px;
     /* min-width: 250px; */
-    @media (min-width: 450px) {
+    @media (max-width: 750px) {
         min-width: 250px;
+        max-width: 150px;
+    }
+    @media (max-width: 700px) {
+        max-width: 100%;
     }
 `;
 
