@@ -101,6 +101,26 @@ const HomePage = () => {
                     )) }
                 </div>
             </SectionContainer>
+            <SectionContainer bg_color={colors.menu_color}>
+                <CustomeTitle color={colors.accent} b_color={colors.accent}>How it works</CustomeTitle>
+                <InnerServiceContainer>
+                    <Img1 src={process.env.PUBLIC_URL + "/images/how_it_works.png"} alt="" className="left_service service_pic" />
+                    <div className="right_service service_box">
+                        <h1 className="service_title">How to get the best out of your investments and affiliates</h1>
+                        <p className="service_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </InnerServiceContainer>
+            </SectionContainer>
+            <SectionContainer bg_color={colors.primary}>
+                <CustomeTitle color={colors.accent} b_color={colors.accent}>Assets under management value.</CustomeTitle>
+                <InnerServiceContainer>
+                    <div className="right_service service_box">
+                        <h1 className="service_title">Know more about your assets</h1>
+                        <p className="service_paragraph" style={{ color: '#fff' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <Img1 src={process.env.PUBLIC_URL + "/images/assets_under.png"} alt="" className="left_service service_pic" />
+                </InnerServiceContainer>
+            </SectionContainer>
         </div>
     )
 }
