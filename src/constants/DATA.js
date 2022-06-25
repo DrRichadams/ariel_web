@@ -8,12 +8,12 @@ export const investment_strategies = [
 ];
 
 export const investment_packages = [
-    { id: 1, package_name: "Opal", fee: 100 },
-        { id: 2, package_name: "Pearl", fee: 200 },
-        { id: 3, package_name: "Emerald", fee: 300 },
-        { id: 4, package_name: "Ruby", fee: 1000 },
-        { id: 5, package_name: "Sapphire", fee: 3000 },
-        { id: 6, package_name: "Diamond", fee: 5000 },
+        { id: 1, package_name: "Opal", fee: 100, color: "" },
+        { id: 2, package_name: "Pearl", fee: 200, color: "" },
+        { id: 3, package_name: "Emerald", fee: 300, color: "" },
+        { id: 4, package_name: "Ruby", fee: 1000, color: "" },
+        { id: 5, package_name: "Sapphire", fee: 3000, color: "" },
+        { id: 6, package_name: "Diamond", fee: 5000, color: "" },
 ];
 
 export const qualities = [

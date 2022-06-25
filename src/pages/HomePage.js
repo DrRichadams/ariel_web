@@ -88,9 +88,27 @@ const HomePage = () => {
                     { investment_strategies.map((item, index) => ( <StrategyBox pos={index + 5} key={item.id}> <StrategyTitle>{item.name}</StrategyTitle> </StrategyBox> )) }
                 </div>
             </SectionContainer>
+            <SectionContainer bg_color={colors.primary}>
+                <CustomeTitle color={colors.accent} b_color="#fff">Investment Packages</CustomeTitle>
+                <div className="investment_packages">
+                    { investment_packages.map((item, index) => (
+                        <PackageBox>
+                            MY MY
+                        </PackageBox>
+                    )) }
+                </div>
+            </SectionContainer>
         </div>
     )
 }
+
+const PackageBox = styled.div`
+
+`;
+
+const PackageTitle = styled.p`
+
+`;
 
 const StrategyBox = styled.div`
     position: relative;
