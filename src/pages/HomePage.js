@@ -8,13 +8,16 @@ import { Img1 } from "../utils/Images";
 import { 
     investment_strategies, 
     investment_packages, 
-    qualities
+    qualities,
+    FAQ
 } from "../constants/DATA";
 import { FaFacebookF } from "react-icons/fa";
 import { SiLinkedin } from "react-icons/si";
 import { RiInstagramFill, RiTwitterFill } from "react-icons/ri";
+import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 
 const HomePage = () => {
+    const [ selQuestion, setSelQuestion ] = useState(0)
     return(
         <div className="home_page_">
             <SectionContainer bg_color={colors.primary}>
@@ -149,15 +152,64 @@ const HomePage = () => {
             </SectionContainer>
             <SectionContainer bg_color={colors.primary}>
                 <CustomeTitle color={colors.accent} b_color={colors.primary}>FREQUENTLY ASKED QUESTIONS.</CustomeTitle>
+                <Para>
+                    Sometimes you might have questions that need instant answers. <br></br>
+                    We have created this frequently asked questions section to help you get those answers faster.
+                </Para>
+                <FQQCONTAINER>
+                    { FAQ.map((item, index) => (
+                        <FaqBox key={item.id}>
+                            <FaqQuestionBox>
+                                <FaqQuestion>{item.question}</FaqQuestion>
+                                {index + 1 == selQuestion ? <AiOutlineMinus color="#fff" size={33} onClick={() =>setSelQuestion(0)} style={{cursor: "pointer"}} />:<AiOutlinePlus color="#fff" size={33} onClick={() =>setSelQuestion(index + 1)} style={{cursor: "pointer"}} />}
+                            </FaqQuestionBox>
+                            <FaqAnswer display={index + 1 == selQuestion ? "block":"none"}>{item.answer}</FaqAnswer>
+                        </FaqBox>
+                    )) }
+                </FQQCONTAINER>
             </SectionContainer>
         </div>
     )
 }
 
+const FQQCONTAINER = styled.div`
+
+`;
+
+const FaqBox = styled.div`
+    padding-bottom: 15px;
+    border-bottom: 2px solid #fff;
+`;
+
+const FaqQuestionBox = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+`;
+
+const FaqQuestion = styled.p`
+    /* color: ${colors.accent}; */
+    color: #d9d9d9;
+    text-transform: uppercase;
+    padding-right: 60px;
+    pointer-events: none;
+`;
+
+const FaqAnswer = styled.p`
+    color: ${colors.secondary};
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    line-height: 24px;
+    padding-right: 60px;
+    display: ${props=>props.display};
+    pointer-events: none;
+`;
+
 const Para = styled.p`
     color: #fff;
     text-align: center;
     font-family: roboto, sans-serif;
+    font-weight: 300;
     margin-bottom: 50px;
 `;
 
