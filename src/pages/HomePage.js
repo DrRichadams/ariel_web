@@ -10,6 +10,9 @@ import {
     investment_packages, 
     qualities
 } from "../constants/DATA";
+import { FaFacebookF } from "react-icons/fa";
+import { SiLinkedin } from "react-icons/si";
+import { RiInstagramFill, RiTwitterFill } from "react-icons/ri";
 
 const HomePage = () => {
     return(
@@ -121,9 +124,88 @@ const HomePage = () => {
                     <Img1 src={process.env.PUBLIC_URL + "/images/assets_under.png"} alt="" className="left_service service_pic" />
                 </InnerServiceContainer>
             </SectionContainer>
+            <SectionContainer bg_color={colors.secondary}>
+                <CustomeTitle color={colors.accent} b_color={colors.accent}>Compansation Plan</CustomeTitle>
+                <CompansationPlan className="about_box">
+                    <div className="left_about">
+                        <h3>HERE IS OUR COMPANSATION PLAN</h3>
+                        {/* <h3>About <span>Us</span></h3> */}
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    </div>
+                    <div className="right_about">
+                        <Img1 src={process.env.PUBLIC_URL + "/images/compansation.png"} alt="" />
+                    </div>
+                </CompansationPlan>
+            </SectionContainer>
+            <SectionContainer bg_color={"#01050F"}>
+                <CustomeTitle color={colors.accent} b_color={colors.accent}>Let's get social.</CustomeTitle>
+                <Para>You can get to know us personally throuh our social media platforms. <br></br>See you there!</Para>
+                <SocContainer className="social_media_boxes">
+                    <SocCircle link="facebook.com" color="#1976D2"><FaFacebookF size={36} /></SocCircle>
+                    <SocCircle link="linkedin.com" color="#0177B5"><SiLinkedin size={36} /></SocCircle>
+                    <SocCircle link="instagram.com" color="#D34069"><RiInstagramFill size={36} /></SocCircle>
+                    <SocCircle link="twitter.com" color="#03A9F4"><RiTwitterFill size={36} /></SocCircle>
+                </SocContainer>
+            </SectionContainer>
+            <SectionContainer bg_color={colors.primary}>
+                <CustomeTitle color={colors.accent} b_color={colors.primary}>FREQUENTLY ASKED QUESTIONS.</CustomeTitle>
+            </SectionContainer>
         </div>
     )
 }
+
+const Para = styled.p`
+    color: #fff;
+    text-align: center;
+    font-family: roboto, sans-serif;
+    margin-bottom: 50px;
+`;
+
+const SocContainer = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+`;
+
+const SocCircle = styled.a.attrs(props=>({
+    href: `https://${props.link}`,
+    target: "_blank",
+}))`
+    background-color: #fff;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: ${props=>props.color};
+    position: relative;
+    overflow: hidden;
+    * {
+        transition: all 300ms ease-in-out;
+        z-index: 1;
+    }
+    :hover {
+        //color: #ccc !important;
+    }
+    :hover > *{
+        transform: scale(1.5);
+    }
+`;
+
+const CompansationPlan = styled.div`
+    display: flex;
+    /* align-items: flex-start; */
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    /* background-color: red; */
+    gap: 20px;
+    @media (max-width: 780px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+`;
 
 const PackageBox = styled.div`
     background-color: ${props=>props.bg_color};
