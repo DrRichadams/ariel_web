@@ -168,9 +168,37 @@ const HomePage = () => {
                     )) }
                 </FQQCONTAINER>
             </SectionContainer>
+            <SectionContainer bg_color={colors.bg_color}>
+                <InnerFooter>
+
+                </InnerFooter>
+                <BottomFooter>
+                    <div>&copy;</div>
+                    <div>2022</div>
+                    <div>All Rights Reserved</div>
+                    <div>Developed by <span style={{color: "rgb(1,161,231)", cursor: "pointer"}}>THE REPUBLIC ARTIST</span></div>
+                </BottomFooter>
+            </SectionContainer>
         </div>
     )
 }
+
+const InnerFooter = styled.div`
+    
+`;
+
+const BottomFooter = styled.div`
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: ${colors.primary};
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #ccc;
+`;
 
 const FQQCONTAINER = styled.div`
 
@@ -199,7 +227,8 @@ const FaqAnswer = styled.p`
     color: ${colors.secondary};
     font-family: Roboto, sans-serif;
     font-weight: 300;
-    line-height: 24px;
+    font-size: 13px;
+    line-height: 22px;
     padding-right: 60px;
     display: ${props=>props.display};
     pointer-events: none;
@@ -232,12 +261,16 @@ const SocCircle = styled.a.attrs(props=>({
     color: ${props=>props.color};
     position: relative;
     overflow: hidden;
+    border: 2px solid transparent;
     * {
         transition: all 300ms ease-in-out;
         z-index: 1;
     }
     :hover {
         //color: #ccc !important;
+        box-shadow: -3px -3px 12px #fff,
+                    3px 3px 12px #fff;
+        border: 2px solid ${props=>props.color}
     }
     :hover > *{
         transform: scale(1.5);

@@ -7,6 +7,7 @@ const MainContainer = styled.div`
     /* background-color: ${colors.primary}; */
     background-color: ${props => props.color};
     min-height: 100vh;
+    position: relative;
     @media (max-width: 1050px) {
         padding: 30px 100px;
     }
