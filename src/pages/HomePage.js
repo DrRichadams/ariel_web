@@ -16,6 +16,36 @@ import { SiLinkedin } from "react-icons/si";
 import { RiInstagramFill, RiTwitterFill } from "react-icons/ri";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 
+import { 
+    FooterParagraph,
+    FooterTitle,
+    ContactDetail,
+    InnerFooter,
+    BottomFooter,
+    FQQCONTAINER,
+    FaqBox,
+    FaqQuestionBox,
+    FaqQuestion,
+    FaqAnswer,
+    Para,
+    SocContainer,
+    SocCircle,
+    CompansationPlan,
+    PackageBox,
+    PackageTitle1,
+    PackageTitle,
+    PackagePrize,
+    PackageBtn,
+    StrategyBox,
+    StrategyTitle,
+    CustomeTitle,
+    InnerServiceContainer,
+    HomeBanner,
+    About_sect,
+    BoxContainer,
+    InvestmentPackages
+} from "../features/HomePageStyledComponents";
+
 const HomePage = () => {
     const [ selQuestion, setSelQuestion ] = useState(0)
     return(
@@ -96,7 +126,7 @@ const HomePage = () => {
             </SectionContainer>
             <SectionContainer bg_color={colors.primary}>
                 <CustomeTitle color={colors.accent} b_color="#fff">Investment Packages</CustomeTitle>
-                <div className="investment_packages">
+                <InvestmentPackages>
                     { investment_packages.map((item, index) => (
                         <PackageBox bg_color={item.bg_color}>
                             <PackageTitle1 color={item.color}>{item.package_name}</PackageTitle1>
@@ -105,7 +135,7 @@ const HomePage = () => {
                             <PackageBtn>Get Started</PackageBtn>
                         </PackageBox>
                     )) }
-                </div>
+                </InvestmentPackages>
             </SectionContainer>
             <SectionContainer bg_color={colors.menu_color}>
                 <CustomeTitle color={colors.accent} b_color={colors.accent}>How it works</CustomeTitle>
@@ -168,12 +198,33 @@ const HomePage = () => {
                     )) }
                 </FQQCONTAINER>
             </SectionContainer>
-            <SectionContainer bg_color={colors.bg_color}>
+            <SectionContainer bg_color={colors.bg_color} size={60}>
                 <InnerFooter>
-
+                    <div className="part1">
+                        <FooterTitle>A.C.M</FooterTitle>
+                        <FooterParagraph>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, animi autem voluptatum impedit eos explicabo corrupti dolorum molestias blanditiis qui ipsa aut unde fugit nihil, accusamus molestiae, fuga porro alias?</FooterParagraph>
+                    </div>
+                    <div className="part2">
+                        <FooterTitle>GET STARTED.</FooterTitle>
+                        <FooterParagraph>We have several investment channels to choose from. Start your awesome<br/> journey now.</FooterParagraph>
+                        <PackageBtn>Get started</PackageBtn>
+                    </div>
+                    <div className="part3">
+                        <FooterTitle>GET IN TOUCH</FooterTitle>
+                        <div className="contacts">
+                            <ContactDetail>
+                                <strong>Cell:</strong>
+                                <FooterParagraph>+264 854 998 481</FooterParagraph>
+                            </ContactDetail>
+                            <ContactDetail>
+                                <strong>Email:</strong>
+                                <FooterParagraph>assistance@ariel_crypto.com</FooterParagraph>
+                            </ContactDetail>
+                        </div>
+                    </div>
                 </InnerFooter>
                 <BottomFooter>
-                    <div>&copy;</div>
+                    <div style={{fontSize: '20px', fontWeight: 'bold'}}>&copy;</div>
                     <div>2022</div>
                     <div>All Rights Reserved</div>
                     <div>Developed by <span style={{color: "rgb(1,161,231)", cursor: "pointer"}}>THE REPUBLIC ARTIST</span></div>
@@ -182,265 +233,5 @@ const HomePage = () => {
         </div>
     )
 }
-
-const InnerFooter = styled.div`
-    
-`;
-
-const BottomFooter = styled.div`
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background-color: ${colors.primary};
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    color: #ccc;
-`;
-
-const FQQCONTAINER = styled.div`
-
-`;
-
-const FaqBox = styled.div`
-    padding-bottom: 15px;
-    border-bottom: 2px solid #fff;
-`;
-
-const FaqQuestionBox = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-`;
-
-const FaqQuestion = styled.p`
-    /* color: ${colors.accent}; */
-    color: #d9d9d9;
-    text-transform: uppercase;
-    padding-right: 60px;
-    pointer-events: none;
-`;
-
-const FaqAnswer = styled.p`
-    color: ${colors.secondary};
-    font-family: Roboto, sans-serif;
-    font-weight: 300;
-    font-size: 13px;
-    line-height: 22px;
-    padding-right: 60px;
-    display: ${props=>props.display};
-    pointer-events: none;
-`;
-
-const Para = styled.p`
-    color: #fff;
-    text-align: center;
-    font-family: roboto, sans-serif;
-    font-weight: 300;
-    margin-bottom: 50px;
-`;
-
-const SocContainer = styled.div`
-    display: flex;
-    justify-content: space-evenly;
-`;
-
-const SocCircle = styled.a.attrs(props=>({
-    href: `https://${props.link}`,
-    target: "_blank",
-}))`
-    background-color: #fff;
-    width: 120px;
-    height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    color: ${props=>props.color};
-    position: relative;
-    overflow: hidden;
-    border: 2px solid transparent;
-    * {
-        transition: all 300ms ease-in-out;
-        z-index: 1;
-    }
-    :hover {
-        //color: #ccc !important;
-        box-shadow: -3px -3px 12px #fff,
-                    3px 3px 12px #fff;
-        border: 2px solid ${props=>props.color}
-    }
-    :hover > *{
-        transform: scale(1.5);
-    }
-`;
-
-const CompansationPlan = styled.div`
-    display: flex;
-    /* align-items: flex-start; */
-    align-items: center;
-    justify-content: center;
-    min-height: 80vh;
-    /* background-color: red; */
-    gap: 20px;
-    @media (max-width: 780px) {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-`;
-
-const PackageBox = styled.div`
-    background-color: ${props=>props.bg_color};
-    position: relative;
-    padding: 50px 20px;
-    margin-top: 80px;
-    border-radius: 8px;
-    box-shadow: 
-                -6px -6px 4px rgba(255,255,255,0.6);
-`;
-
-const PackageTitle1 = styled.h3`
-    color: ${colors.accent};
-    font-family: oswald, sans-serif;
-    font-size: 30px;
-    text-transform: uppercase;
-    font-weight: 900;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-`;
-const PackageTitle = styled.p`
-    color: ${props=>props.color};
-    margin: 0;
-    padding: 0;
-    font-family: roboto, sans-serif;
-    line-height: 22px;
-    font-weight: 400;
-`;
-
-const PackagePrize = styled.p`
-    background-color: ${colors.accent};
-    border: 8px solid ${colors.primary};
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-    padding: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: ${colors.bg_color};
-    font-size: 13px;
-    font-weight: bold;
-    position: absolute;
-    top: -55px;
-    left: 50%;
-    transform: translateX(-50%);
-`;
-
-const PackageBtn = styled.button`
-    background-color: ${colors.accent};
-    color: ${colors.primary};
-    border: none;
-    border-radius: 6px;
-    padding: 12px 30px;
-    font-family: roboto, sans-serif;
-    text-transform: uppercase;
-    font-size: bold;
-    display: block;
-    margin: 15px auto;
-`;
-
-const StrategyBox = styled.div`
-    position: relative;
-    z-index: 100;
-    padding-bottom: 15px;
-    margin-bottom: 10px;
-    ::after {
-        content: '';
-        position: absolute;
-        z-index: -1;
-        bottom: 0;
-        left: 0;
-        height: calc(${props => props.pos} * 3px);
-        width: 100%;
-        background-color: ${colors.accent};
-    }
-`
-
-const StrategyTitle = styled.p`
-    color: ${colors.secondary};
-    font-family: roboto, sans-serif;
-    text-transform: uppercase;
-    /* text-align: right; */
-`
-
-const CustomeTitle = styled.h2`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-family: oswald;
-    font-size: 60px;
-    color: ${props => props.color};
-    position: relative;
-    padding-bottom: 20px;
-    text-transform: uppercase;
-    ::after{
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 5px;
-        background-color: ${props => props.b_color};
-    }
-
-`;
-const InnerServiceContainer = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-`;
-
-const HomeBanner = styled.div`
-    display: flex;
-    align-items: center;
-    height: 80vh;
-    /* background-color: red; */
-    @media (max-width: 780px) {
-        flex-direction: column;
-    }
-`;
-
-const About_sect = styled.div`
-    display: flex;
-    align-items: flex-start;
-    min-height: 80vh;
-    /* background-color: red; */
-    gap: 20px;
-    @media (max-width: 780px) {
-        flex-direction: column;
-        align-items: flex-end;
-    }
-`;
-
-const BoxContainer = styled.div`
-    box-shadow: 12px 12px 30px rgba(255, 138, 0, 0.4),
-                -12px -12px 30px rgba(255, 138, 0, 0.4);
-    /* background-color: ${colors.bg_color}; */
-    padding: 20px;
-    max-width: 300px;
-    /* min-width: 250px; */
-    @media (max-width: 750px) {
-        min-width: 250px;
-        max-width: 150px;
-    }
-    @media (max-width: 700px) {
-        max-width: 100%;
-    }
-`;
 
 export default HomePage;
