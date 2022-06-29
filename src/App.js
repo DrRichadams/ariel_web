@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import ForgotPassword from './pages/ForgotPassword';
+import UserDashboard from './DashboardUser/pages/UserDashboard';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Signup />} />
           <Route path='/forgotPassword' element={<ForgotPassword />} />
+          <Route path='/user_dash' element={<UserDashboard />} />
       </Routes>
       
     </div>
