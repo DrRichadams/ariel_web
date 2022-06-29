@@ -55,8 +55,8 @@ const HomePage = () => {
                 {/* <div className="home_banner"> */}
                 <HomeBanner>
                     <div className="left_sect">
-                        <Title2 color={colors.secondary}>Ariel Crypto Management</Title2>
-                        <Title1 color={colors.accent}>Your #1 investment platform</Title1>
+                        <Title1 color={colors.secondary}>Ariel Crypto Management</Title1>
+                        <Title2 color={colors.accent}>Your #1 investment platform</Title2>
                         <Text1 color={colors.secondary}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         tempor incididunt ut labore et dolore magna aliqua 
@@ -70,7 +70,7 @@ const HomePage = () => {
             </SectionContainer>
             <SectionContainer bg_color={colors.secondary}>
                 <h3>KNOW MORE ABOUT US</h3>
-                <h3>WE ARE AN AMAZING TEAM WITH YOUR INTERESTS AT HEART</h3>
+                <h3>WE ARE AN AMAZING TEAM WITH YOUR BEST INTERESTS AT HEART</h3>
                 <About_sect className="about_box">
                     <div className="left_about">
                         <h3>About <span>Us</span></h3>
@@ -82,11 +82,11 @@ const HomePage = () => {
                 </About_sect>
             </SectionContainer>
             <SectionContainer bg_color={colors.secondary}>
-                <h3>WHAT WE STAND FOR.</h3>
+                <h3>WHAT WE STAND FOR</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, animi autem voluptatum impedit eos explicabo corrupti dolorum molestias blanditiis qui ipsa aut unde fugit nihil, accusamus molestiae, fuga porro alias?</p>
                 <div className="future_box_container">
                     <BoxContainer>
-                        <h3>MISION</h3>
+                        <h3>MISSION</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi, iusto! Ab saepe sunt nobis aliquam harum, ad, possimus, dolorum amet cupiditate quas at et laboriosam perspiciatis nostrum consectetur animi velit ipsam! Velit voluptates quis ipsum.</p>
                     </BoxContainer>
                     <BoxContainer>
@@ -125,7 +125,7 @@ const HomePage = () => {
                 </div>
             </SectionContainer>
             <SectionContainer bg_color={colors.primary}>
-                <CustomeTitle color={colors.accent} b_color="#fff">Investment Packages</CustomeTitle>
+                <CustomeTitle color={colors.accent} b_color="#fff">Our Investment Packages</CustomeTitle>
                 <InvestmentPackages>
                     { investment_packages.map((item, index) => (
                         <PackageBox bg_color={item.bg_color}>
@@ -148,7 +148,7 @@ const HomePage = () => {
                 </InnerServiceContainer>
             </SectionContainer>
             <SectionContainer bg_color={colors.primary}>
-                <CustomeTitle color={colors.accent} b_color={colors.accent}>Assets under management value.</CustomeTitle>
+                <CustomeTitle color={colors.accent} b_color={colors.accent}>Assets under management value</CustomeTitle>
                 <InnerServiceContainer>
                     <div className="right_service service_box">
                         <h1 className="service_title">Know more about your assets</h1>
@@ -158,10 +158,10 @@ const HomePage = () => {
                 </InnerServiceContainer>
             </SectionContainer>
             <SectionContainer bg_color={colors.secondary}>
-                <CustomeTitle color={colors.accent} b_color={colors.accent}>Compansation Plan</CustomeTitle>
+                <CustomeTitle color={colors.accent} b_color={colors.accent}>Compensation Plan</CustomeTitle>
                 <CompansationPlan className="about_box">
                     <div className="left_about">
-                        <h3>HERE IS OUR COMPANSATION PLAN</h3>
+                        <h3>HERE IS OUR COMPENSATION PLAN</h3>
                         {/* <h3>About <span>Us</span></h3> */}
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
                     </div>
@@ -171,8 +171,8 @@ const HomePage = () => {
                 </CompansationPlan>
             </SectionContainer>
             <SectionContainer bg_color={"#01050F"}>
-                <CustomeTitle color={colors.accent} b_color={colors.accent}>Let's get social.</CustomeTitle>
-                <Para>You can get to know us personally throuh our social media platforms. <br></br>See you there!</Para>
+                <CustomeTitle color={colors.accent} b_color={colors.accent}>Let's get social</CustomeTitle>
+                <Para>Get to know us personally through our social media platforms. <br></br>Can't wait to see you there!</Para>
                 <SocContainer className="social_media_boxes">
                     <SocCircle link="facebook.com" color="#1976D2"><FaFacebookF size={36} /></SocCircle>
                     <SocCircle link="linkedin.com" color="#0177B5"><SiLinkedin size={36} /></SocCircle>
@@ -181,7 +181,7 @@ const HomePage = () => {
                 </SocContainer>
             </SectionContainer>
             <SectionContainer bg_color={colors.primary}>
-                <CustomeTitle color={colors.accent} b_color={colors.primary}>FREQUENTLY ASKED QUESTIONS.</CustomeTitle>
+                <CustomeTitle color={colors.accent} b_color={colors.primary}>FREQUENTLY ASKED QUESTIONS</CustomeTitle>
                 <Para>
                     Sometimes you might have questions that need instant answers. <br></br>
                     We have created this frequently asked questions section to help you get those answers faster.
