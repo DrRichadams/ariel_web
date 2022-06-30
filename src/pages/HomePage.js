@@ -15,6 +15,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { SiLinkedin } from "react-icons/si";
 import { RiInstagramFill, RiTwitterFill } from "react-icons/ri";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
+import InvestmentPackagesComponent from "../components/InvestmentPackagesComponent";
 
 import { 
     FooterParagraph,
@@ -126,16 +127,8 @@ const HomePage = () => {
             </SectionContainer>
             <SectionContainer bg_color={colors.primary}>
                 <CustomeTitle color={colors.accent} b_color="#fff">Our Investment Packages</CustomeTitle>
-                <InvestmentPackages>
-                    { investment_packages.map((item, index) => (
-                        <PackageBox bg_color={item.bg_color}>
-                            <PackageTitle1 color={item.color}>{item.package_name}</PackageTitle1>
-                            <PackageTitle color={item.color}>{item.story}</PackageTitle>
-                            <PackagePrize>USD${item.fee}</PackagePrize>
-                            <PackageBtn>Get Started</PackageBtn>
-                        </PackageBox>
-                    )) }
-                </InvestmentPackages>
+                
+                <InvestmentPackagesComponent />
             </SectionContainer>
             <SectionContainer bg_color={colors.menu_color}>
                 <CustomeTitle color={colors.accent} b_color={colors.accent}>How it works</CustomeTitle>

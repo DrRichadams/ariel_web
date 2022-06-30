@@ -49,4 +49,21 @@ export const FAQ = [
     { id: 10, question: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore ut numquam eligendi vero mollitia qu ad ipsam?", answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore ut numquam eligendi vero mollitia quia sequi voluptas cumque ad ipsam Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore ut numquam eligendi vero mollitia quia sequi voluptas cumque ad ipsaeligendi vero mollitia quia sequi voluptas cumque ad ipsameligendi vero mollitia quia sequi voluptas cumque ad ipsam?" },
     { id: 11, question: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore ut numquam eligendi vero mollitia qu ad ipsam?", answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore ut numquam eligendi vero mollitia quia sequi voluptas cumque ad ipsam Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore ut numquam eligendi vero mollitia quia sequi voluptas cumque ad ipsaeligendi vero mollitia quia sequi voluptas cumque ad ipsameligendi vero mollitia quia sequi voluptas cumque ad ipsam?" },
     { id: 12, question: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore ut numquam eligendi vero mollitia qu ad ipsam?", answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore ut numquam eligendi vero mollitia quia sequi voluptas cumque ad ipsam Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore ut numquam eligendi vero mollitia quia sequi voluptas cumque ad ipsaeligendi vero mollitia quia sequi voluptas cumque ad ipsameligendi vero mollitia quia sequi voluptas cumque ad ipsam?" },
-]
+];
+
+export const BG_DOTS = [
+    { id: 1, row_dots: [ 1, 1, 1, 1 ] },
+    { id: 2, row_dots: [ 1, 1, 1.5, 1.5, 1, 1 ] },
+    { id: 3, row_dots: [ 1, 1.5, 2, 2, 1.5, 1 ] },
+    { id: 4, row_dots: [ 1, 1.5, 2, 2, 1.5, 1 ] },
+    { id: 5, row_dots: [ 1, 1, 1.5, 1.5, 1, 1 ] },
+    { id: 6, row_dots: [ 1, 1, 1, 1 ] },
+];
+// export const BG_DOTS = [
+//     { id: 1, row_dots: [ 1, 1, 1, 1 ] },
+//     { id: 2, row_dots: [ 1, 1, 2, 2, 1, 1 ] },
+//     { id: 3, row_dots: [ 1, 2, 3, 3, 2, 1 ] },
+//     { id: 4, row_dots: [ 1, 2, 3, 3, 2, 1 ] },
+//     { id: 5, row_dots: [ 1, 1, 2, 2, 1, 1 ] },
+//     { id: 6, row_dots: [ 1, 1, 1, 1 ] },
+// ];

@@ -10,10 +10,22 @@ import { MdHistory } from "react-icons/md"
 
 import { 
     LeftMenu,
-    RightContainer,
     LeftContainer,
-    MainContainer
+    MainContainer,
+    commonLinkStyles,
+    selectedLink,
+    unselectedLink,
+    MenuLinkTitlte,
+    UserProfileContainer,
+    UserDetailsContainer,
+    UserPlan,
+    UserTitle,
+    UserPicContainer,
+    UserPic,
  } from "../features/UserDashStyledComponents";
+ import { RightContainer } from "../features/Containers";
+ import RightContainerComponent from "../features/Containers";
+
 
 const UserDashboard = () => {
     return(
@@ -30,65 +42,33 @@ const UserDashboard = () => {
                         </UserDetailsContainer>
                     </UserProfileContainer>
                     <div className="left_menu_links_container">
-                        <h3 className="menu_links_title">DASHBOARD</h3>
+                        <h3 className="menu_links_title">More options</h3>
                         <div className="menu_boxes">
-                            <NavLink to={"/"}>
-                                <AiFillAppstore color="black" size={30} />
-                                <p>INVESTMENT PLANS</p>
+                            <NavLink to={""} style={({isActive}) => isActive ? selectedLink:unselectedLink}>
+                                <AiFillAppstore size={30} />
+                                <MenuLinkTitlte>DASHBOARD</MenuLinkTitlte>
                             </NavLink>
-                            <NavLink to={"/"}>
-                                <MdHistory color="black" size={30} />
-                                <p>WITHDRAWAL HISTORY</p>
+                            <NavLink to={"/user_dash/earnings"} style={({isActive}) => isActive ? selectedLink:unselectedLink}>
+                                <AiFillGold size={30} />
+                                <MenuLinkTitlte>DIVIDENTS AND AFFILIATES</MenuLinkTitlte>
                             </NavLink>
-                            <NavLink to={"/"}>
-                                <AiFillGold color="black" size={30} />
-                                <p>EARNINGS</p>
+                            <NavLink to={"/user_dash/affiliates"} style={({isActive}) => isActive ? selectedLink:unselectedLink}>
+                                <FaUserFriends size={30} />
+                                <MenuLinkTitlte>INVESTMENTS</MenuLinkTitlte>
                             </NavLink>
-                            <NavLink to={"/"}>
-                                <FaUserFriends color="black" size={30} />
-                                <p>AFFILIATES</p>
+                            <NavLink to={"/user_dash/withdrawal_history"} style={({isActive}) => isActive ? selectedLink:unselectedLink}>
+                                <MdHistory size={30} />
+                                <MenuLinkTitlte>WITHDRAWAL HISTORY</MenuLinkTitlte>
                             </NavLink>
                         </div>
                     </div>
                 </LeftMenu>
             </LeftContainer>
-            <RightContainer className="right_container">
+            <RightContainerComponent>
                 <Outlet />
-            </RightContainer>
+            </RightContainerComponent>
         </MainContainer>
     )
 }
-
-export const MenuLink = styled(NavLink)`
-    text-decoration: none;
-`;
-
-export const UserProfileContainer = styled.div`
-    display: flex;
-    align-items: center;
-`;
-export const UserDetailsContainer = styled.div`
-    /* display: flex; */
-`;
-export const UserPlan = styled.p`
-    margin: 0;
-    color: #01050f;
-    font-size: 15px;
-`;
-export const UserTitle = styled.h3`
-    margin: 0;
-    color: ${colors.primary};
-    font-size: 17px;
-`;
-export const UserPicContainer = styled.div`
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-right: 20px;
-`;
-export const UserPic = styled.img`
-    width: 100%;
-`;
 
 export default UserDashboard;
