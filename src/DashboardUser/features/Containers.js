@@ -5,6 +5,7 @@ import { BG_DOTS } from "../../constants/DATA";
 
 export const RightContainer = styled.div`
     /* background-color: red; */
+    background: linear-gradient(60deg, rgba(255, 138, 0, 0.3), rgba(255,0,0,0.2));
     width: 100%;
     padding: 20px 100px;
     position: relative;
