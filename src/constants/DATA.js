@@ -81,4 +81,14 @@ export const AFFILIATES = [
     { id: 9, name: "Jora", surname: "Momont", email: "jor@gmail.com", amount: 10 },
     { id: 10, name: "Tessa", surname: "Nowa", email: "tess@gmail.com", amount: 60 },
     { id: 11, name: "Theresa", surname: "Mecko", email: "resa@gmail.com", amount: 18 },
+];
+
+export const MONTHLY_EARNING = [
+    { id: 1, month: "June", earn: 2000 },
+    { id: 2, month: "July", earn: 8000 },
+    { id: 3, month: "August", earn: 500 },
+    { id: 4, month: "September", earn: 1000 },
+    { id: 5, month: "October", earn: 200 },
+    { id: 6, month: "November", earn: 20000 },
+    { id: 7, month: "December", earn: 10000 },
 ]

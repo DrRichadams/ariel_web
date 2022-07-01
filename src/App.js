@@ -11,6 +11,8 @@ import InvestmentPlansPage from './DashboardUser/pages/InvestmentPlansPage';
 import WithdrawalHistoryPage from './DashboardUser/pages/WithdrawalHistoryPage';
 import EarningsPage from "./DashboardUser/pages/EarningsPage";
 import AffiliatesPage from "./DashboardUser/pages/AffiliatesPage";
+import Affiliates from './DashboardUser/pages/Affiliates';
+import Dividents from './DashboardUser/pages/Dividents';
 
 function App() {
   return (
@@ -23,7 +25,10 @@ function App() {
           <Route path='/user_dash' element={<UserDashboard />}>
               <Route path='' element={<InvestmentPlansPage />} />
               <Route path='withdrawal_history' element={<WithdrawalHistoryPage />} />
-              <Route path='earnings' element={<EarningsPage />} />
+              <Route path='earnings' element={<EarningsPage />}>
+                <Route path='' element={<Dividents />} />
+                <Route path='affiliates' element={<Affiliates />} />
+              </Route>
               <Route path='affiliates' element={<AffiliatesPage />} />
           </Route>
       </Routes>
