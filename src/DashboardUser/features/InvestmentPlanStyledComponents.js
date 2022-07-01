@@ -85,7 +85,7 @@ export const PackageCost = styled.p`
     margin: 0;
     color: #01050f;
     font-weight: 900;
-    font-size: 20px;
+    font-size: ${props=> props.size ? props.size:20}px;
     font-family: Roboto;
     margin-top: 2px;
 `;

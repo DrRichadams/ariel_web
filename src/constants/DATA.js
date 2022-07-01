@@ -67,3 +67,18 @@ export const BG_DOTS = [
 //     { id: 5, row_dots: [ 1, 1, 2, 2, 1, 1 ] },
 //     { id: 6, row_dots: [ 1, 1, 1, 1 ] },
 // ];
+
+
+export const AFFILIATES = [
+    { id: 1, name: "James", surname: "Gordon", email: "james@gmail.com", amount: 10 },
+    { id: 2, name: "Marry", surname: "Magdalene", email: "marry@gmail.com", amount: 50 },
+    { id: 3, name: "Amos", surname: "Monach", email: "mona@gmail.com", amount: 10 },
+    { id: 4, name: "Nathan", surname: "Thuse", email: "thuse@gmail.com", amount: 20 },
+    { id: 5, name: "Andrew", surname: "Jones", email: "andy@gmail.com", amount: 15 },
+    { id: 6, name: "Moses", surname: "Chrone", email: "mose@gmail.com", amount: 100 },
+    { id: 7, name: "Cathrene", surname: "Dunes", email: "cathy@gmail.com", amount: 18 },
+    { id: 8, name: "Dollyne", surname: "Parton", email: "dolly@gmail.com", amount: 30 },
+    { id: 9, name: "Jora", surname: "Momont", email: "jor@gmail.com", amount: 10 },
+    { id: 10, name: "Tessa", surname: "Nowa", email: "tess@gmail.com", amount: 60 },
+    { id: 11, name: "Theresa", surname: "Mecko", email: "resa@gmail.com", amount: 18 },
+]
