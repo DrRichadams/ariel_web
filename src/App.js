@@ -10,7 +10,7 @@ import UserDashboard from './DashboardUser/pages/UserDashboard';
 import InvestmentPlansPage from './DashboardUser/pages/InvestmentPlansPage';
 import WithdrawalHistoryPage from './DashboardUser/pages/WithdrawalHistoryPage';
 import EarningsPage from "./DashboardUser/pages/EarningsPage";
-import AffiliatesPage from "./DashboardUser/pages/AffiliatesPage";
+import InvestmentsPage from "./DashboardUser/pages/InvestmentsPage";
 import Affiliates from './DashboardUser/pages/Affiliates';
 import Dividents from './DashboardUser/pages/Dividents';
 
@@ -29,7 +29,7 @@ function App() {
                 <Route path='' element={<Dividents />} />
                 <Route path='affiliates' element={<Affiliates />} />
               </Route>
-              <Route path='affiliates' element={<AffiliatesPage />} />
+              <Route path='affiliates' element={<InvestmentsPage />} />
           </Route>
       </Routes>
       
