@@ -77,6 +77,6 @@ code {
 }
 
 .service_btn:hover{
-  color: #ff8800bb;
+  color: rgba(255, 136, 0, 0.733);
   /* color: #ff0000; */
 }
