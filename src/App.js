@@ -13,8 +13,10 @@ import EarningsPage from "./DashboardUser/pages/EarningsPage";
 import InvestmentsPage from "./DashboardUser/pages/InvestmentsPage";
 import Affiliates from './DashboardUser/pages/Affiliates';
 import Dividents from './DashboardUser/pages/Dividents';
+import ErrorNoROute from './pages/ErrorNoROute';
 
 function App() {
+  const [ userRoutesAllowed, setUserRoutesAllowed ] = useState(true)
   return (
     <div className="App">
       <Routes>
@@ -22,7 +24,9 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Signup />} />
           <Route path='/forgotPassword' element={<ForgotPassword />} />
-          <Route path='/user_dash' element={<UserDashboard />}>
+          {
+            userRoutesAllowed ?
+            <Route path='/user_dash' element={<UserDashboard />}>
               <Route path='' element={<InvestmentPlansPage />} />
               <Route path='withdrawal_history' element={<WithdrawalHistoryPage />} />
               <Route path='earnings' element={<EarningsPage />}>
@@ -30,7 +34,9 @@ function App() {
                 <Route path='affiliates' element={<Affiliates />} />
               </Route>
               <Route path='affiliates' element={<InvestmentsPage />} />
-          </Route>
+          </Route>: ""
+          }
+          <Route path='*' element={<ErrorNoROute />} />
       </Routes>
       
     </div>
